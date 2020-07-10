@@ -136,8 +136,14 @@ h1,h2,h3,h4,h5 {
     color:#f9d789;
 }
 
-.nav__link:hover:after {
+.nav__link:hover:after,
+.nav__link.active:after {
     opacity: 1;
+}
+
+.nav__link.active {
+    color:#f9d789;
+
 }
 
 
@@ -173,18 +179,31 @@ h1,h2,h3,h4,h5 {
 /* Slider */
 
 .slider{
+width: 100%;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.slider__inner {
     display: flex;
     justify-content: space-between;
+   
 }
 
 .slider__item{
-    width: 24%;
+    width: 23%;
     padding: 20px 0;
+    border-top: 3px solid #fff;
+    
 
     font-size: 18px;
     color: #fff;
     text-transform: uppercase;
 }
+
 
 .slider__num {
     font-size: 24px;
